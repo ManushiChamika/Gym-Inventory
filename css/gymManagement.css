@@ -1,234 +1,255 @@
-/* General Reset */
-body, h1, h2, h3, p, ul, li, table, th, td, form, input, button, select, label {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
+/* General Layout */
 body {
-    background-color: #f8f9fa;
-    color: #212529;
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 30px auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7fc;
+    margin: 0;
     padding: 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Header */
-h1, h2 {
-    margin-bottom: 20px;
-    text-align: center;
-    color: #343a40;
+    color: #333;
 }
 
 h1 {
-    font-size: 2.5em;
-    border-bottom: 3px solid #007bff;
-    display: inline-block;
-    padding-bottom: 5px;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #007BFF;
 }
 
 h2 {
-    font-size: 1.8em;
-    margin-top: 40px;
+    text-align: center;
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+    color: #333;
 }
 
-/* Tables */
+/* Notice Board */
+.notice {
+    background: linear-gradient(145deg, #f0f8ff, #e6f7ff);  /* Soft gradient background */
+    border: 2px solid #007BFF;  /* A more pronounced border color */
+    border-radius: 8px;
+    padding: 30px;
+    margin: 50px;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);  /* Stronger box shadow */
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    position: relative; /* For positioning icons */
+}
+
+.notice::before {
+    content: "⚠️";  /* Adding a warning icon */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 3rem;  /* Larger icon */
+    color: #007BFF;  /* Color matching border */
+}
+
+.notice h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #007BFF;  /* Make heading standout with color */
+}
+
+.notice ul {
+    list-style: none;
+    padding-left: 0;
+    line-height: 1.8;
+}
+
+.notice ul li {
+    font-size: 1.2rem;
+    margin: 12px 0;
+    font-weight: 500;
+}
+
+.notice ul li::before {
+    content: "✔️"; /* Add a checkmark for each item */
+    margin-right: 10px;
+    color: #28a745;  /* Green checkmark */
+}
+
+/* Optional: Add hover effect to notice box */
+.notice:hover {
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);  /* Slightly bigger shadow on hover */
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+
+/* Table Styles */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
-    background-color: #f8f9fa;
+    margin-top: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-table th, table td {
-    text-align: left;
-    padding: 15px;
-    border-bottom: 1px solid #ddd;
-}
-
-table th {
-    background-color: #007bff;
-    color: #fff;
-    font-weight: bold;
-}
-
-table tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-table tr:hover {
-    background-color: #e9ecef;
-    cursor: pointer;
-}
-
-table a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-table a:hover {
-    text-decoration: underline;
-}
-
-/* Forms */
-form {
-    width: 100%;
-    margin: 20px 0;
-    padding: 20px;
-    background-color: #f8f9fa;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-form label {
-    font-weight: bold;
-    margin-bottom: 10px;
-    display: inline-block;
-    color: #343a40;
-}
-
-form input, form select, form button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
+th, td {
+    padding: 12px;
+    text-align: center;
     border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1em;
 }
 
-form input:focus, form select:focus {
-    border-color: #007bff;
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-}
-
-form button {
-    background-color: #007bff;
+th {
+    background-color: #007BFF;
     color: #fff;
-    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+td {
+    background-color: #fff;
+    font-size: 1rem;
+}
+
+/* Table Rows - Hover Effect */
+tr:hover {
+    background-color: #f7f7f7;
+}
+
+button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-form button:hover {
-    background-color: #0056b3;
+button:hover {
+    background-color: #218838;
 }
 
-/* Popup Messages */
-.popup-message {
-    background-color: #d4edda;
-    color: #155724;
+button:focus {
+    outline: none;
+}
+
+/* Floating Home Button */
+.floating-button {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    background-color: #007BFF;
+    color: transparent; /* Hide text */
+    border: none;
     padding: 15px;
-    border-left: 5px solid #28a745;
-    margin: 20px 0;
-    position: relative;
-    animation: fadein 1s ease-in-out;
-}
-
-.popup-message .close-popup {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    font-size: 1.2em;
-    cursor: pointer;
-    color: #155724;
-}
-
-@keyframes fadein {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Buttons */
-a {
-    text-decoration: none;
-    display: inline-block;
-    margin-right: 10px;
-}
-
-.edit-btn, .delete-btn {
-    padding: 8px 15px;
-    border-radius: 5px;
-    font-size: 0.9em;
-    font-weight: bold;
-    color: #fff;
+    border-radius: 50%;
     text-align: center;
-    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
 }
 
-.edit-btn {
-    background-color: #ffc107;
+/* Logo inside Floating Button */
+.home-logo {
+    width: 50px;  /* Adjust the size of the logo */
+    height: 50px;
+    object-fit: contain;
 }
 
-.edit-btn:hover {
-    background-color: #e0a800;
+/* Hover Effect for Floating Button */
+.floating-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-.delete-btn {
-    background-color: #dc3545;
+/* Floating Button Focus */
+.floating-button:focus {
+    outline: none;
 }
 
-.delete-btn:hover {
-    background-color: #c82333;
-}
 
-/* Notice Board */
-.notice-board {
-    background-color: #e9ecef;
-    border: 1px solid #dee2e6;
-    border-radius: 5px;
+/* Form Styles */
+form {
+    background-color: #fff;
     padding: 20px;
-    margin: 20px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.notice-board h2 {
-    color: #495057;
-    border-bottom: 2px solid #adb5bd;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-}
-
-.notice-board ul {
-    list-style-type: disc;
-    margin-left: 20px;
-    color: #495057;
-}
-
-.notice-board ul li {
+label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
     margin-bottom: 10px;
+    display: block;
 }
 
-/* Media Queries */
-@media screen and (max-width: 768px) {
-    h1, h2 {
-        font-size: 1.8em;
+input, select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+input[type="number"] {
+    width: 100%;
+}
+
+input[type="datetime-local"] {
+    padding: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
     }
 
-    table th, table td {
-        font-size: 0.9em;
+    h1 {
+        font-size: 2rem;
     }
 
-    form input, form select, form button {
-        font-size: 0.9em;
+    h2 {
+        font-size: 1.5rem;
     }
 
-    .edit-btn, .delete-btn {
-        font-size: 0.8em;
+    table, form {
+        width: 100%;
+        padding: 10px;
     }
+
+    .notice {
+        padding: 15px;
+    }
+
+    .floating-button {
+        padding: 12px;
+        font-size: 3.0rem;
+    }
+}
+
+/* Alert Messages */
+p {
+    font-size: 1rem;
+    text-align: center;
+    margin: 15px 0;
+}
+
+p.success {
+    color: green;
+}
+
+p.error {
+    color: red;
+}
+
+/* Cards */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
