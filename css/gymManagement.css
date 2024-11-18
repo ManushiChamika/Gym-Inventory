@@ -1,0 +1,234 @@
+/* General Reset */
+body, h1, h2, h3, p, ul, li, table, th, td, form, input, button, select, label {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #212529;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+h1, h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #343a40;
+}
+
+h1 {
+    font-size: 2.5em;
+    border-bottom: 3px solid #007bff;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-top: 40px;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #f8f9fa;
+}
+
+table th, table td {
+    text-align: left;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #e9ecef;
+    cursor: pointer;
+}
+
+table a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+table a:hover {
+    text-decoration: underline;
+}
+
+/* Forms */
+form {
+    width: 100%;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: inline-block;
+    color: #343a40;
+}
+
+form input, form select, form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+form input:focus, form select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+form button {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Popup Messages */
+.popup-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-left: 5px solid #28a745;
+    margin: 20px 0;
+    position: relative;
+    animation: fadein 1s ease-in-out;
+}
+
+.popup-message .close-popup {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: #155724;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Buttons */
+a {
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.edit-btn, .delete-btn {
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.edit-btn {
+    background-color: #ffc107;
+}
+
+.edit-btn:hover {
+    background-color: #e0a800;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* Notice Board */
+.notice-board {
+    background-color: #e9ecef;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.notice-board h2 {
+    color: #495057;
+    border-bottom: 2px solid #adb5bd;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.notice-board ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    color: #495057;
+}
+
+.notice-board ul li {
+    margin-bottom: 10px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    h1, h2 {
+        font-size: 1.8em;
+    }
+
+    table th, table td {
+        font-size: 0.9em;
+    }
+
+    form input, form select, form button {
+        font-size: 0.9em;
+    }
+
+    .edit-btn, .delete-btn {
+        font-size: 0.8em;
+    }
+}

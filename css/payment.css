@@ -1,0 +1,280 @@
+ /* General styling for the payment page */
+ * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    position: relative;
+    background-image: url('../images/pay4.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: -1;
+}
+
+/* Center the pop-up */
+.popup {
+display: none;
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: #fff;
+border-radius: 12px;
+padding: 30px 40px;
+box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+z-index: 1000;
+max-width: 500px;
+width: 90%;
+animation: fadeIn 0.3s ease-out;
+}
+
+/* Animation for popup appearance */
+@keyframes fadeIn {
+from {
+opacity: 0;
+transform: translate(-50%, -50%) scale(0.95);
+}
+to {
+opacity: 1;
+transform: translate(-50%, -50%) scale(1);
+}
+}
+
+/* Content inside the popup */
+.popup .popup-content {
+text-align: center;
+}
+
+/* Popup heading styling */
+.popup .popup-content p {
+font-size: 24px;
+color: #191970;
+margin-bottom: 14px;
+font-family: cursive;
+}
+.popup .popup-content h2 {
+font-size: 24px;
+color: #333;
+margin-bottom: 20px;
+font-family: 'Arial', sans-serif;
+}
+/* Style for the popup button */
+.popup .popup-content button {
+background-color: #4CAF50;
+color: white;
+padding: 12px 30px;
+border: none;
+border-radius: 8px;
+font-size: 16px;
+cursor: pointer;
+transition: background-color 0.3s ease, transform 0.2s ease;
+font-family: 'Arial', sans-serif;
+}
+
+.popup .popup-content button:hover {
+background-color: #45a049;
+transform: translateY(-3px);
+}
+
+.popup .popup-content button:active {
+background-color: #388e3c;
+transform: translateY(1px);
+}
+
+/* Overlay background */
+.overlay {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.7);
+z-index: 999;
+animation: fadeInOverlay 0.3s ease-out;
+}
+
+/* Overlay fade-in effect */
+@keyframes fadeInOverlay {
+from {
+opacity: 0;
+}
+to {
+opacity: 1;
+}
+}
+
+/* Optional style to make the popup responsive */
+@media (max-width: 600px) {
+.popup {
+padding: 20px 25px;
+}
+.popup .popup-content h2 {
+font-size: 20px;
+}
+.popup .popup-content button {
+padding: 10px 20px;
+}
+}
+
+.payment-container {
+    background-color: #1c3b70;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    width: 450px;
+    color: white;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+p {
+    color: #d0d4dc;
+    margin-bottom: 20px;
+}
+
+.user-info {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 30px;
+    background-color: #2a4d85;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    color: #d0d4dc;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+select, input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    margin-top: 5px;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background-color: #00b894;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #00a482;
+}
+
+.summary {
+    background-color: #2a4d85;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: left;
+}
+
+.summary strong {
+    font-size: 18px;
+    color: #d0d4dc;
+}
+
+#summary {
+    font-size: 16px;
+    color: #d0d4dc;
+}
+
+.submit-button {
+    background-color: #00b894;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    border: none;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.submit-button:hover {
+    background-color: #00a482;
+}
+
+/* Floating Home Button */
+.home-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #00b894;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    animation: floaty 2s ease-in-out infinite; /* Apply floating effect */
+}
+
+.home-button:hover {
+    background-color: #00a482;
+}
+
+/* Define the floating animation */
+@keyframes floaty {
+    0% {
+        transform: translateY(0); /* Start at original position */
+    }
+    50% {
+        transform: translateY(-10px); /* Move upwards */
+    }
+    100% {
+        transform: translateY(0); /* Return to original position */
+    }
+}

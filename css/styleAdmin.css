@@ -1,0 +1,449 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Container to hold the logo without affecting the navbar height */
+.logo-wrapper {
+  position: relative;
+  width: 100px;
+  height: 60px;
+}
+
+/* Position the logo absolutely so it doesn't resize the navbar */
+.logo-wrapper img {
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  width: 90px;
+  height: 90px;
+}
+
+/* navbar section  */
+
+.navbar {
+  padding: 20px;
+  background: #050729;
+}
+
+.nav-link {
+  position: relative; /* To position the badge relative to the link */
+}
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  font-size: 12px;
+  padding: 5px 10px;
+}
+
+.navbar .navbar-toggler {
+  color: #AACF31 !important;
+  background: #AACF31;
+  border-radius: 50%;
+  padding: 15px;
+  outline: none;
+  border: none;
+}
+
+.navbar #navbarNav {
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.navbar .navbar-brand {
+  color: #f1f1f1;
+  font-size: 30px;
+  margin-left: 0px;
+  font-weight: 600;
+}
+
+.navbar .navbar-brand i {
+  font-size: 25px;
+  background: #AACF31;
+  border-radius: 50%;
+  padding: 10px 15px;
+}
+
+.navbar .collapse {
+  background: #050729;
+}
+
+.navbar .dropdown-menu {
+  width: 12px;
+}
+
+.navbar .dropdown-menu li a {
+  color: #050729;
+  font-size: 15px;
+}
+
+.navbar ul li .bi {
+  background: #fff;
+  color: #050729;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 50%;
+}
+
+.navbar ul li a {
+  color: #f1f1f1;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 18px;
+  margin-right: 40px;
+}
+
+.navbar ul li a:hover {
+  color: #ffa500;
+}
+
+.name {
+  font-size: 30px;
+  background-color: #050729;
+  color: #ffa500;
+  padding-bottom: 40px;
+}
+
+/* notification modal admin */
+
+/* Set z-index for modal and backdrop */
+.modal-backdrop {
+  z-index: 1040 !important;
+  /* Lower than modal */
+}
+
+.modal {
+  z-index: 1050 !important;
+  /* Higher than backdrop */
+}
+
+.modal-dialog {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  max-width: 100%;
+}
+
+.modal-content {
+  height: 100%;
+  border-radius: 0;
+}
+
+.modal-body {
+  height: calc(100% - 56px - 56px);
+  overflow-y: auto;
+}
+
+/* project section */
+
+.project-section {
+  background-color: #AACF31;
+  padding: 90px;
+}
+
+.project-section .text h1 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #050729;
+  text-transform: capitalize;
+}
+
+.project-section .text p {
+  font-size: 18px;
+  color: #050729;
+}
+
+.project-section hr {
+  height: 2px;
+  background-color:#050729;
+  border: none;
+}
+
+/* Card container */
+.project-section .project .card {
+  width: 300px;
+  margin-top: 40px;
+  border-radius: 20px;
+  border: none;
+  margin-left: 30px;
+  box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden; /* Prevents any overflow */
+  margin-bottom: 10px;
+  flex: 0 0 auto; /* Prevents cards from shrinking */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Card hover effect */
+.project-section .project .card:hover {
+  transform: scale(1.1);
+}
+
+/* Image styling */
+.project-section .project .card-img-top {
+  margin-top: 10px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+/* Card content styling */
+.project-section .project .card-body {
+  padding: 15px;
+}
+
+.project-section .project .card h4 {
+  font-size: 20px;
+  color: #050729;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.project-section .project .card p {
+  font-size: 15px;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Button styling */
+.project-section .project .card button {
+  margin-top: 10px;
+  border-radius: 30px;
+  color: #fff;
+  border: none;
+  background-color: #AACF31;
+  height: 40px;
+  width: 120px;
+  text-transform: capitalize;
+}
+
+.project-section .project .card button:hover {
+  background-color: #fff;
+  border: 2px solid #AACF31;
+  color: #AACF31;
+}
+
+.project-section .project .card .deleteBtn {
+  background-color: #f00;
+}
+
+.project-section .project .card .deleteBtn:hover {
+  background-color: rgb(255, 255, 255);
+  border: 2px solid #f00;
+  color: #f00;
+}
+
+/* Add Course Button */
+#addCourseBtn {
+  margin-left: 20px;
+  background-color: #0a44a8;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#addCourseBtn:hover {
+  background-color: #065454;
+}
+
+/* Modal styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #888;
+}
+
+/* Close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: #AACF31;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #AACF31;
+}
+
+/* General Modal Styling */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+}
+
+/* Success Modal Content */
+.success-modal {
+  background-color: #dff0d8;
+  color: #3c763d;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: 20% auto;
+  text-align: center;
+  height: 20%;
+}
+
+.success-modal p {
+  font-size: 1.2em;
+  margin: 0 0 10px;
+}
+
+.success-modal button {
+  background-color: #4caf50; /* Green */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.success-modal button:hover {
+  background-color: #45a049;
+}
+
+
+
+/* footer section  */
+
+footer {
+  padding: 40px;
+  background: #050729;
+}
+
+footer .logo {
+  font-size: 30px;
+  color: #fff;
+  font-weight: 600;
+}
+
+footer .logo i {
+  font-size: 25px;
+  background: #AACF31;
+  border-radius: 50%;
+  padding: 10px 15px;
+}
+
+footer ul li {
+  list-style: none;
+  margin-top: 20px;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #d1d1d1;
+  margin-left: 30px;
+  font-size: 15px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+footer ul li a:hover {
+  color: #ffa500;
+}
+
+footer p {
+  color: #fff;
+  margin-top: 20px;
+  font-size: 15px;
+  margin-left: 30px;
+}
+
+.back-to-top {
+  background: #AACF31;
+  height: 50px;
+  width: 50px;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 50px;
+}
+
+@media (max-width: 700px) {
+  .hero-section img {
+    height: 350px;
+    margin-top: 50px;
+  }
+
+  .services-section .services .card {
+    margin-bottom: 50px;
+  }
+
+  .services-section .services .row1 {
+    margin-bottom: 0px;
+  }
+
+  .about-section {
+    padding: 50px 30px;
+  }
+  .about-section img {
+    height: 300px;
+  }
+
+  .contact-section {
+    padding: 50px;
+  }
+
+  footer ul li a {
+    margin-left: 5px;
+    letter-spacing: 0;
+  }
+}

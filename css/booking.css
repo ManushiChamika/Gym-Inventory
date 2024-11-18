@@ -1,0 +1,154 @@
+/* Reset and Basic Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 900px;
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.section {
+    margin-top: 20px;
+}
+
+/* Inventory Table */
+.inventory-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+.inventory-table th,
+.inventory-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+}
+
+.inventory-table th {
+    background-color: #2980b9;
+    color: #fff;
+    font-weight: bold;
+}
+
+.inventory-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.inventory-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Facility Booking Form */
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.booking-form label {
+    font-weight: bold;
+    color: #34495e;
+}
+
+.booking-form input,
+.booking-form select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.booking-form input:focus,
+.booking-form select:focus {
+    border-color: #2980b9;
+    outline: none;
+}
+
+/* Buttons */
+.button {
+    padding: 12px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #2980b9;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #1f5a7a;
+}
+
+.button:disabled {
+    background-color: #b3cce6;
+    cursor: not-allowed;
+}
+
+.submit-btn {
+    align-self: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .inventory-table th,
+    .inventory-table td {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .booking-form input,
+    .booking-form select {
+        font-size: 14px;
+    }
+
+    .button {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+}
+
+/* Messages and Alerts */
+.alert {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.success {
+    background-color: #2ecc71;
+    color: #fff;
+}
