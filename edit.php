@@ -63,6 +63,7 @@ if ($showModal) {
     <link rel="stylesheet" href="css/styleProfile.css">
 </head>
 
+<!-- Body Section Starts -->
 <body>
     <div class="container">
         <div class="form-box-edit box" style="width: 80%;">
@@ -338,5 +339,7 @@ if ($showModal) {
 </script>
 
 </body>
+
+<!-- Body Section Ends -->
 
 </html>
